@@ -1,3 +1,3 @@
-# dcc0230.github.io
+# Diego Castañeda Cortés
 
 ## Mi primera página de Github 😁  
