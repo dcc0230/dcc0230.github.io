@@ -1,4 +1,4 @@
-#Ante la vida sereno  
+# Ante la vida sereno  
 
 Ante la vida sereno,  
 y ante la muerte, mayor;  
@@ -19,13 +19,13 @@ Ni al relámpago ni al trueno
 puedo tenerles temor.  
 Si me matan, bueno:  
 si vivo, mejor.  
- 
-Traidores me echan veneno
-y yo les echo valor.
-Si me matan, bueno:
-si vivo, mejor.
- 
-El corazón traigo lleno
-de un alegre resplandor.
-Si me matan, bueno:
-si vivo, mejor
+    
+Traidores me echan veneno  
+y yo les echo valor.  
+Si me matan, bueno:  
+si vivo, mejor.  
+     
+El corazón traigo lleno  
+de un alegre resplandor.  
+Si me matan, bueno:  
+si vivo, mejor.    
