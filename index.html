@@ -1,26 +1,88 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <title>Página Personal</title>
+  <title>Perfil de Diego Castañeda</title>
+  <!-- Vinculación al CSS separado -->
   <link rel="stylesheet" href="style.css">
+  <!-- Font Awesome 5 y Google Fonts -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Century+Gothic:wght@100;400&display=swap" rel="stylesheet">
 </head>
 <body>
-  <section class="box">
-    <img src="img/perfildiego.jpg" width="220" alt="" class="box-img">
-    <h1>Diego Castañeda</h1>
-    <h2>Software Engineer - Web Developer</h2>
-    <p>Bienvenido a mi perfil personal!</p>
-    <ul>
-      <li><a href="#"><i class="fa fa-facebook-square" aria-hidden="true"></i></a></li>
-      <li><a href="#"><i class="fa fa-twitter-square" aria-hidden="true"></i></a></li>
-      <li><a href="#"><i class="fa fa-google-plus-square" aria-hidden="true"></i></i></a></li>
-      <li><a href="#"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></li>
-    </ul>
+  <main class="container">
 
-  </section>
+    <!-- Tarjeta de perfil -->
+    <section class="profile-card">
+      <button id="theme-toggle" aria-label="Toggle theme">
+        <i class="fas fa-moon"></i>
+      </button>
+      <img src="img/perfildiego.jpg" alt="Foto de Diego Castañeda" class="avatar">
+      <h1>Diego Castañeda</h1>
+      <h2>Software Engineer – Web Developer</h2>
+      <p>Bienvenido a mi perfil personal! Soy apasionado por desarrollar soluciones web eficientes y escalables.</p>
+      <ul class="social-links">
+        <!-- Enlaces sociales actualizados: Instagram, Email, Twitter y LinkedIn -->
+        <li><a href="https://instagram.com/tu_usuario" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
+        <li><a href="mailto:dicastaneda.cortes@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a></li>
+        <li><a href="https://x.com/diiegooc10?s=21" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a></li>
+        <li><a href="https://www.linkedin.com/in/diego-casta%C3%B1eda-cort%C3%A9s-1497b4378?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a></li>
+      </ul>
+    </section>
+
+    <!-- Sección de Skills -->
+    <section class="skills">
+      <h3>Habilidades</h3>
+      <ul>
+        <li>
+          <span>HTML5 & CSS3</span>
+          <div class="progress-bar"><div class="progress htmlcss"></div></div>
+        </li>
+        <li>
+          <span>JavaScript (ES6+)</span>
+          <div class="progress-bar"><div class="progress js"></div></div>
+        </li>
+        <li>
+          <span>React.js</span>
+          <div class="progress-bar"><div class="progress react"></div></div>
+        </li>
+        <li>
+          <span>Node.js & Express</span>
+          <div class="progress-bar"><div class="progress node"></div></div>
+        </li>
+        <li>
+          <span>Git & GitHub</span>
+          <div class="progress-bar"><div class="progress git"></div></div>
+        </li>
+        <li>
+          <span>Docker</span>
+          <div class="progress-bar"><div class="progress docker"></div></div>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Sección de Educación -->
+    <section class="education">
+      <h3>Educación</h3>
+      <p>Estudiante de Ingeniería Informática en la Universidad de Almería.</p>
+    </section>
+
+  </main>
+
+  <!-- Script para tema claro/oscuro -->
+  <script>
+    const toggleBtn = document.getElementById('theme-toggle');
+    const currentTheme = localStorage.getItem('theme') || 'light';
+    document.documentElement.setAttribute('data-theme', currentTheme);
+    toggleBtn.innerHTML = currentTheme === 'dark' ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
+
+    toggleBtn.addEventListener('click', () => {
+      let theme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', theme);
+      localStorage.setItem('theme', theme);
+      toggleBtn.innerHTML = theme === 'dark' ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
+    });
+  </script>
 </body>
 </html>
